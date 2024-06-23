@@ -1,14 +1,14 @@
 from sqlalchemy.orm import sessionmaker
-from models import User, engine
+from models import Library, engine
 
-def signup(username: str, password: str, email: str, phone_number: str) -> bool:
+def addNewBook(bookName: str, authorName: str, department: str, price: str) -> bool:
     Session = sessionmaker(bind=engine)
     session = Session()
     try:
-        if username and password and email and phone_number != "":
-            new_user = User(user_name=username, password=password, email=email, phone=phone_number)
+        if bookName and authorName and department and price != "":
+            new_user = Library(book_name=bookName, author_name=authorName, department=department, book_price=price)
             session.add(new_user)
-            print("Data added")
+            print("Book added")
         else:
             print("Please fill-up all entry!")
     except Exception as e:
@@ -17,4 +17,3 @@ def signup(username: str, password: str, email: str, phone_number: str) -> bool:
         session.commit()
     finally:
         session.close()
-    

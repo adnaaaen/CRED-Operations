@@ -21,14 +21,14 @@ A GUI CRUD operation python application using custometkinter and SQLAlchemy
 
 - `DATABASE_URL`
 
-create a .env file at the root of the project and add the following:
+create a `.env` file at the root of the `app` folder and add the following:
 
 Below are examples of how to set up the `DATABASE_URL` for different types of local databases:
 
-- For PostgreSQL
+- For `PostgreSQL`
   `DATABASE_URL=postgresql://your_username@localhost:5432/your_database_name`
 
-- For MySQL
+- For `MySQL`
   `DATABASE_URL=mysql://your_username@localhost:3306/your_database_name`
 
 ## Documentation
