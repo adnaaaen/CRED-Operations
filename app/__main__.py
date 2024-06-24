@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from screen.sidebar_frame import SideBar
+from windows.sidebar_frame import SideBar
 from view import getAllData
 from CTkTable import CTkTable
 
@@ -17,13 +17,13 @@ class App(ctk.CTk):
 
         self.sidebar = SideBar(master=self)
         self.sidebar.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
-
+        self.value = getAllData()
         if not getAllData():
             self.table = ctk.CTkLabel(self, text="No data!", font=("Arial", 22, "bold"))
         else:
             self.table = CTkTable(
                 self,
-                values=getAllData(),
+                values=self.value,
                 padx=0,
                 hover=True,
                 header_color="#08162b",

@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from .view import addNewBook
 
-class AddNewBookWindow(ctk.CTkToplevel):
+class AddNewBook(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.geometry("600x500")
@@ -31,6 +31,7 @@ class AddNewBookWindow(ctk.CTkToplevel):
             text="Add Book",
             width=250,
             fg_color="green",
+            font=("Arial", 15, "bold"),
             hover_color="#094d14",
             command=lambda: addNewBook(
                 self.book_name.get(), self.author_name.get(), self.department.get(), self.book_price.get()
