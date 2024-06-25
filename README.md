@@ -1,12 +1,27 @@
-# CRUD operations using SQLAlchemy
+<div align="center">
+  
+# Library management
+<img alt="Static Badge" src="https://img.shields.io/badge/SQLAlchemy-2.0.30-version">
+<img alt="Static Badge" src="https://img.shields.io/badge/custometkinter-5.2.2-version">
+</div>
 
-A GUI CRUD operation python application using custometkinter and SQLAlchemy
+## Screenshots
+
+<div align="center">
+  
+  <img src="./documentaion_image/home_demo.png">  
+  <img src="./documentaion_image/newbook_demo.png">  
+  <img src="./documentaion_image/updatebook_demo.png">  
+  <img src="./documentaion_image/searchbook_demo.png">  
+  <img src="./documentaion_image/deletebook_demo.png">  
+
+</div>
 
 ## Installation
 
 ```bash
-  git clone https://github.com/adnaaaen/CRUD-Operations.git
-  cd CRUD-Operations
+  git clone https://github.com/adnaaaen/Library_Management.git
+  cd Library_Management
 ```
 
 ```bash
@@ -30,8 +45,3 @@ Below are examples of how to set up the `DATABASE_URL` for different types of lo
 
 - For `MySQL`
   `DATABASE_URL=mysql://your_username@localhost:3306/your_database_name`
-
-## Documentation
-
-- [SQLAlchemy](https://docs.sqlalchemy.org/en/20/)
-- [CustomTkinter](https://customtkinter.tomschimansky.com/documentation/)
