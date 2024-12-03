@@ -1,5 +1,6 @@
 import customtkinter as ctk
 
+
 class SearchBook(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -11,7 +12,9 @@ class SearchBook(ctk.CTkToplevel):
         )
         self.label.pack(padx=20, pady=20)
 
-        self.book_id = ctk.CTkEntry(self, placeholder_text="Book id...(integer)", width=250)
+        self.book_id = ctk.CTkEntry(
+            self, placeholder_text="Book id...(integer)", width=250
+        )
         self.book_id.place(relx=0.5, rely=0.3, anchor="center")
 
         self.button = ctk.CTkButton(
@@ -23,4 +26,3 @@ class SearchBook(ctk.CTkToplevel):
             hover_color="#094d14",
         )
         self.button.place(relx=0.5, rely=0.8, anchor="center")
-

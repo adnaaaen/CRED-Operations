@@ -1,5 +1,7 @@
 import customtkinter as ctk
+
 # from .view import updateBook``
+
 
 class UpdateBook(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
@@ -13,16 +15,20 @@ class UpdateBook(ctk.CTkToplevel):
         self.label.pack(padx=20, pady=20)
         self.book_id = ctk.CTkEntry(self, placeholder_text="Book id...", width=250)
         self.book_id.place(relx=0.5, rely=0.2, anchor="center")
-        
+
         self.book_name = ctk.CTkEntry(
             self, placeholder_text="New book name...", width=250
         )
         self.book_name.place(relx=0.5, rely=0.32, anchor="center")
 
-        self.author_name = ctk.CTkEntry(self, placeholder_text="New author name...", width=250)
+        self.author_name = ctk.CTkEntry(
+            self, placeholder_text="New author name...", width=250
+        )
         self.author_name.place(relx=0.5, rely=0.42, anchor="center")
 
-        self.department = ctk.CTkEntry(self, placeholder_text="New department...", width=250)
+        self.department = ctk.CTkEntry(
+            self, placeholder_text="New department...", width=250
+        )
         self.department.place(relx=0.5, rely=0.52, anchor="center")
 
         self.book_price = ctk.CTkEntry(self, placeholder_text="New price...", width=250)

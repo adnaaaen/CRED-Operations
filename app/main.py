@@ -1,7 +1,10 @@
 import customtkinter as ctk
-from windows.sidebar_frame import SideBar
+from service import SideBar
 from view import getAllData
 from CTkTable import CTkTable
+from dependency import Base, engine
+
+Base.metadata.create_all(bind=engine)
 
 class App(ctk.CTk):
     def __init__(self):

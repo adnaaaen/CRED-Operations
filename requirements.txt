@@ -1,11 +1,12 @@
 CTkMessagebox==2.5
+CTkTable==1.1
 customtkinter==5.2.2
 darkdetect==0.8.0
 future==1.0.0
 greenlet==3.0.3
 packaging==24.1
 pillow==10.3.0
-psycopg2==2.9.9
+psycopg2-binary==2.9.10
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 setuptools==70.0.0

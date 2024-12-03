@@ -1,12 +1,18 @@
 from sqlalchemy.orm import sessionmaker
-from models import Library, engine
+from models import Library
+from dependency import engine
 
-def addNewBook(bookName: str, authorName: str, department: str, price: str) -> bool:
+def addNewBook(bookName: str, authorName: str, department: str, price: str) -> None:
     Session = sessionmaker(bind=engine)
     session = Session()
     try:
         if bookName and authorName and department and price != "":
-            new_user = Library(book_name=bookName, author_name=authorName, department=department, book_price=price)
+            new_user = Library(
+                book_name=bookName,
+                author_name=authorName,
+                department=department,
+                book_price=price,
+            )
             session.add(new_user)
             print("Book added")
         else:

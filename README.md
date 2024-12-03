@@ -1,6 +1,7 @@
 <div align="center">
   
-# Library management
+# CustomeTkinter Library Management App
+
 <img alt="Static Badge" src="https://img.shields.io/badge/SQLAlchemy-2.0.30-version">
 <img alt="Static Badge" src="https://img.shields.io/badge/custometkinter-5.2.2-version">
 </div>
@@ -9,27 +10,27 @@
 
 <div align="center">
   
-  <img src="./documentaion_image/home_demo.png">  
-  <img src="./documentaion_image/newbook_demo.png">  
-  <img src="./documentaion_image/updatebook_demo.png">  
-  <img src="./documentaion_image/searchbook_demo.png">  
-  <img src="./documentaion_image/deletebook_demo.png">  
+  <img src="./assets/new.png">  
+  <img src="./assets/home.png">  
+  <img src="./assets/delete.png">  
+  <img src="./assets/search.png">  
+  <img src="./assets/update.png">  
 
 </div>
 
 ## Installation
 
 ```bash
-  git clone https://github.com/adnaaaen/Library_Management.git
-  cd Library_Management
+  git clone https://github.com/adnaaaen/tkinter-library-service.git
+  cd tkinter-library-service
 ```
 
 ```bash
-  pip install -r requirement.txt
+  pip install -r requirements.txt
 ```
 
 ```bash
-  python app
+  python app/main.py
 ```
 
 ## Environment Variables
