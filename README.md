@@ -1,6 +1,6 @@
 <div align="center">
   
-# CustomeTkinter Library Management App
+# CustomeTkinter Book Management App
 
 <img alt="Static Badge" src="https://img.shields.io/badge/SQLAlchemy-2.0.30-version">
 <img alt="Static Badge" src="https://img.shields.io/badge/custometkinter-5.2.2-version">
@@ -21,8 +21,8 @@
 ## Installation
 
 ```bash
-  git clone https://github.com/adnaaaen/tkinter-library-service.git
-  cd tkinter-library-service
+  git clone https://github.com/adnaaaen/tkinter-Book-service.git
+  cd tkinter-Book-service
 ```
 
 ```bash

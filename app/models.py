@@ -13,3 +13,18 @@ class Book(Base):
     is_available = Column(BOOLEAN, default=True)
     created_at = Column(DATETIME, default=datetime.now())
     updated_at = Column(DATETIME, default=datetime.now())
+
+    def __repr__(self) -> str:
+        return f"<{self.id} : {self.name} , {self.author} , {self.department}>"
+
+    def json(self) -> dict:
+        return {
+            "id": self.id,
+            "name": self.name,
+            "author": self.author,
+            "department": self.department,
+            "price": self.price,
+            "is_available": self.is_available,
+            "created_at": self.created_at.date(),
+            "updated_at": self.updated_at.date(),
+        }

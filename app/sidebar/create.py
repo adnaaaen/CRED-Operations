@@ -1,8 +1,8 @@
 import customtkinter as ctk
-from .view import addNewBook
+from service import book_service
 
 
-class AddNewBook(ctk.CTkToplevel):
+class AddBook(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.geometry("600x500")
@@ -13,30 +13,26 @@ class AddNewBook(ctk.CTkToplevel):
         )
         self.label.pack(padx=20, pady=20)
 
-        self.book_name = ctk.CTkEntry(self, placeholder_text="Book name...", width=250)
+        self.book_name = ctk.CTkEntry(self, placeholder_text="Book Name", width=250)
         self.book_name.place(relx=0.5, rely=0.3, anchor="center")
 
-        self.author_name = ctk.CTkEntry(
-            self, placeholder_text="Author name...", width=250
-        )
+        self.author_name = ctk.CTkEntry(self, placeholder_text="Author", width=250)
         self.author_name.place(relx=0.5, rely=0.4, anchor="center")
 
-        self.department = ctk.CTkEntry(
-            self, placeholder_text="Department...", width=250
-        )
+        self.department = ctk.CTkEntry(self, placeholder_text="Department", width=250)
         self.department.place(relx=0.5, rely=0.5, anchor="center")
 
-        self.book_price = ctk.CTkEntry(self, placeholder_text="Price...", width=250)
+        self.book_price = ctk.CTkEntry(self, placeholder_text="Price", width=250)
         self.book_price.place(relx=0.5, rely=0.6, anchor="center")
 
         self.button = ctk.CTkButton(
             self,
-            text="Add Book",
+            text="Add New Book",
             width=250,
             fg_color="green",
             font=("Arial", 15, "bold"),
             hover_color="#094d14",
-            command=lambda: addNewBook(
+            command=lambda: book_service.create_book(
                 self.book_name.get(),
                 self.author_name.get(),
                 self.department.get(),

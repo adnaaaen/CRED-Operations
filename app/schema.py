@@ -1,8 +1,9 @@
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from datetime import datetime
+from models import Book
 
 
-@dataclass(frozen=True)
+@dataclass
 class BookCreate:
     name: str
     author: str
@@ -10,14 +11,7 @@ class BookCreate:
     price: float
 
 
-@dataclass(frozen=True)
-class Book(BookCreate):
-    id: int
-    is_available: bool
-    created_at: datetime
-
-
-@dataclass(frozen=True)
+@dataclass
 class BookUpdate:
     name: str | None = None
     author: str | None = None
@@ -25,15 +19,3 @@ class BookUpdate:
     price: float | None = None
     is_available: bool | None = None
     updated_at: datetime = datetime.now()
-
-
-if __name__ == "__main__":
-    values = {
-        "name": "Data Science",
-        "author": "Adnan",
-        "department": "Computer Science",
-        "price": 999,
-    }
-    new_book = BookCreate(values)
-    # print(asdict(new_book))
-    print(new_book)

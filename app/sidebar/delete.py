@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from .view import deleteBook
+from service import book_service
 
 
 class DeleteBook(ctk.CTkToplevel):
@@ -25,6 +25,6 @@ class DeleteBook(ctk.CTkToplevel):
             fg_color="red",
             font=("Arial", 15, "bold"),
             hover_color="#400b08",
-            command=lambda: deleteBook(self.book_id.get()),
+            command=lambda: book_service.delete_book(int(self.book_id.get())),
         )
         self.button.place(relx=0.5, rely=0.8, anchor="center")

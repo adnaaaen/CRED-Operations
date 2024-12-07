@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from .create import AddNewBook
+from .create import AddBook
 from .delete import DeleteBook
 from .update import UpdateBook
 from .search import SearchBook
@@ -56,7 +56,7 @@ class SideBar(ctk.CTkFrame):
 
     def create_window(self):
         if self.toplevel_window is None or not self.toplevel_window.winfo_exists():
-            self.toplevel_window = AddNewBook(self)
+            self.toplevel_window = AddBook(self)
         else:
             self.toplevel_window.focus()
 
