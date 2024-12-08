@@ -1,5 +1,4 @@
-from models import Book
-from dependency import get_session
+from service import book_service
 
 
 def table_data():
@@ -15,8 +14,7 @@ def table_data():
         "Added On",
         "Updated On",
     ]
-    with get_session() as db:
-        value = db.query(Book).all()
+    value = book_service.read_all_books()
     all_data = [title] + [list((each.json()).values()) for each in value]
     return all_data
 
